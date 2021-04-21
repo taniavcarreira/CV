@@ -1,0 +1,43 @@
+{
+  "name": "nunjucks-starter-kit",
+  "version": "1.0.0",
+  "description": "Nunjucks starter kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node node_modules/gulp/bin/gulp.js auto"
+  },
+  "author": "wzulfikar@ymail.com",
+  "license": "MIT",
+  "homepage": "#",
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "1.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.3",
+    "gulp-stylelint": "^6.0.0",
+    "gulp-uglify": "^3.0.0"
+  },
+  "dependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "gulp-eslint": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sass-lint": "^1.3.4",
+    "nunjucks": "^3.1.2"
+  }
+}
