@@ -1,0 +1,145 @@
+// Primary Colors
+
+$black: #00071D !default;
+$black-bis: #222222 !default;
+$black-ter: #333333 !default;
+
+$grey-darker: #373737 !default;
+$grey-dark: #757d88 !default;
+$grey: #cdcdcd !default;
+$grey-light: #ADA9BB !default;
+$grey-lighter: #d9caca !default;
+$grey-lightest: #E5E8ED !default;
+
+$white: #fafafa !default;
+$white-bis: #fcf1f1 !default;
+$white-ter: #F5F7FA !default;
+
+$fm-orange: #ef6021 !default;
+$fm-orange-d:darken($fm-orange, 10%)!default;
+$fm-orange-l:lighten($fm-orange, 10%)!default;
+
+$fm-coral:#FF783D !default;
+$fm-coral-d:darken($fm-coral, 10%)!default;
+$fm-coral-l:lighten($fm-coral, 10%)!default;
+
+$fm-brick:#D83313 !default;
+$fm-brick-d:darken($fm-brick, 10%)!default;
+$fm-brick-l:lighten($fm-brick, 10%)!default;
+
+$fm-blue:#008bb6 !default;
+$fm-blue-d:darken($fm-blue, 10%)!default;
+$fm-blue-l:lighten($fm-blue, 10%)!default;
+
+$fm-yellow:#F8E816 !default;
+$fm-yeloow-d:darken($fm-yellow, 10%)!default;
+$fm-yellow-l:lighten($fm-yellow, 10%)!default;
+
+
+// Other Colors
+
+$orange: #FF7A5C !default;
+$yellow: #FBBB24 !default;
+$yellow-lighter: #FFE400 !default;
+$green: #00C092 !default;
+$turquoise: #60FBD5 !default;
+$aqua: #00AFB9 !default;
+$blue: #3297c2 !default;
+$blue-dark:#0975C7!default;
+$blue-darker:#002F83!default;
+$blue-darkest:#030E5E!default;
+$purple: #7854F7 !default;
+$red: #F4253B !default;
+$magenta:#CC088A!default;
+$fuchsia:#FF3781!default;
+$navi:#003A6B!default;
+$midnight:#0C6980!default;
+$beetle:#AFCCCF!default;
+$serenity:#C4DBE0!default;
+$plum:#938BB7!default;
+$clot:#970C10!default;
+$crimson:#710117!default;
+$coral:#CF6856!default;
+$mimosa:#FFD780!default;
+$beige:#E8D5B5!default;
+$aqualight:#E2F1F2!default;
+$ivory:#EDF1E9!default;
+$cream:#FFFADE!default;
+$alice:#FBF7FF!default;
+$quartz:#F6E2E3!default;
+$soft:#F5F7FE!default;
+
+
+// SOCIAL NETWORK Colors
+
+$linkedin:#0e76a8;
+$facebook:#4267B2;
+$instagram:#8a3ab9;
+$twitter:#1DA1F2;
+
+// ALERTS MSG Colors
+
+$primary:$orange;
+$success:$green;
+$danger:$red;
+$warning:$yellow;
+$info: $blue;
+$dark: $grey-darker;
+
+$text: $dark;
+
+
+// Typography
+
+$family-sans-serif:  "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-sans:  "Spectral", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-monospace: monospace !default;
+$render-mode: optimizeLegibility !default;
+
+$size-1: 3rem !default;
+$size-2: 2.5rem !default;
+$size-3: 2rem !default;
+$size-4: 1.5rem !default;
+$size-5: 1.25rem !default;
+$size-6: 1rem !default;
+$size-7: 0.85rem !default;
+
+$weight-lighter: 100 !default;
+$weight-light: 300 !default;
+$weight-normal: 400 !default;
+$weight-medium: 500 !default;
+$weight-bold: 700 !default;
+$weight-bolder: 900 !default;
+
+
+// Spacing
+
+$block-spacing: 1.5rem !default;
+
+// Responsiveness
+
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 2rem !default;
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default;
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default;
+
+// 1152px container + 4rem
+$widescreen: 1152px + 2 * $gap !default;
+$widescreen-enabled: true !default;
+
+// 1344px container + 4rem
+$fullhd: 1344px + 2 * $gap !default;
+$fullhd-enabled: true !default;
+
+// Miscellaneous
+
+$easing: ease-out !default;
+$radius-sm: 4px !default;
+$radius: 8px !default;
+$radius-large: 12px !default;
+$radius-rounded: 290486px !default;
+$speed: 86ms !default;

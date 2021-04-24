@@ -1,0 +1,76 @@
+.header {
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+    background-color: $black;
+    padding:1rem;
+    min-height: 3rem;
+    .logo__page-title{
+        padding: 0.5rem;
+        float:left;
+        img{
+            height:2.5rem;
+            border-radius: $radius-sm;
+        }
+    }
+}
+
+.menu {
+    .__list{
+        list-style: none;
+        padding:0;
+        margin:0;
+    }
+
+    .__item{
+        display: inline-block;
+        position: relative;
+        padding: 0.8rem;
+        > a:not(.button), span{
+            text-decoration:none;
+            color:$grey-lighter;
+            line-height:18px;
+        }
+        .--extandable{
+            &:after{
+                content: "\f078";
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 900;
+                margin-left: 0.2rem;
+                font-size: $size-7;
+                line-height:20px;
+                color:$grey-lightest;
+            }
+            &:hover:after{
+                content: "\f077";
+            }
+        }
+        .--active{
+            color: $white;
+        }
+
+        a.button{
+
+        }
+    }
+
+
+    .__dropdown{
+        display: none;
+        position:absolute;
+        top:35px;
+        left:0;
+        padding:0.75rem;
+        background: $black;
+        border-radius:$radius;
+        width:100%; /*could be px*/
+        .dropdown__item{
+            display: block;
+            a{
+                display: block;
+                color:§text;
+                padding: 1rem 0.8rem;
+            }
+        }
+    }
+}

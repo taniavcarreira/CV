@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% set title = 'Welcome' %}
+{% set page = 'home' %}
+
+{% block content %}
+
+<section class="hero">
+  <div class="container">
+    <h1 class="subtitle">José Costa</h1>
+    <h2 class="title is-1">
+      Frontend Web Developer based in Porto.
+      <br>
+      Some bullshit.
+    </h2>
+  </div>
+</section>
+<main>
+  <section class="section about-me">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <h3 class="title is-2">A designer with passion for this and that</h3>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati labore facere a
+            inventore eos voluptate doloribus ducimus. Beatae, natus?
+          </p>
+          <a href="" class="button is-primary">Learn more</a>
+        </div>
+        <div class="column">
+          <figure class="image max_width--25r is-pulled-right">
+            <img src="images/undraw_site_content.svg" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section creating-experiences">
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <figure class="image max_width--25r is-pulled-left">
+            <img src="images/undraw_creation.svg" alt="">
+          </figure>
+        </div>
+        <div class="column">
+          <h3 class="title is-2">A designer with passion for this and that</h3>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam obcaecati labore facere a
+            inventore eos voluptate doloribus ducimus. Beatae, natus?
+          </p>
+          <a href="" class="button is-primary">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="section my-skills">
+    <div class="container">
+      <h3 class="title is-3 has-text-center margin-b--2">
+        My skills
+      </h3>
+      <div class="row">
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-content">
+              <span class="icon is-red is-hoverable has-text-size-2 has-margin-b">
+                <i class="fab fa-html5"></i>
+              </span>
+              <h4 class="title is-4">Section 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Natus quasi recusandae cupiditate commodi doloribus voluptatem sit aut dolore?
+                Praesentium,
+                doloremque?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-content">
+              <span class="icon is-green is-hoverable has-text-size-2 has-margin-b">
+                <i class="fab fa-css3-alt"></i>
+              </span>
+              <h4 class="title is-4">Section 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Natus quasi recusandae cupiditate commodi doloribus voluptatem sit aut dolore?
+                Praesentium,
+                doloremque?
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="card">
+            <div class="card-content">
+              <span class="icon is-blue is-hoverable has-text-size-2 has-margin-b">
+                <i class="fab fa-js-square"></i>
+              </span>
+              <h4 class="title is-4">Section 1</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Natus quasi recusandae cupiditate commodi doloribus voluptatem sit aut dolore?
+                Praesentium,
+                doloremque?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta footer-offset">
+    <div class="container">
+      <div class="card has-p-top has-shadow background__cta">
+        <div class="overlay">
+        <div class="card-content">
+          <h2 class="title is-2"> Interested to know more about me?</h2>
+          <div class="is-flex is-v-align-middle">
+            <div class="has-width-auto">
+              <h3 class="subtitle is-3">I'm looking for new opportunities</h3>
+            </div>
+            <div class="has-width-auto">
+            <a href="mailto:tania.vieira.carreira@gmail.com?subject=I%want%to%schedule%a%meeting%with%you&body=You%20are%20invited%20to%20a%20big%20summer%20party!"
+              class="button" target="_top">E-mail me <i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock content %}
+
+{% block js %}
+{% endblock %}
