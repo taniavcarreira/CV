@@ -1,13 +1,32 @@
 .header {
     display:flex;
-    position: relative;
     justify-content: space-between;
-    background-color: $black;
+    background-image: url(https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
     padding:1rem;
     min-height: 3rem;
+    align-items:center;
     .logo__page-title{
+        display:flex;
         padding: 0.5rem;
+        margin-left:2rem;
         float:left;
+        color:$fm-yellow;
+        font-size: $size-5;
+        align-items:center;
+        margin:4px;
+        .icon{
+            display:inline-block;
+            background-color: rgba($color: white, $alpha: 0.2);
+            color:$fm-yellow;
+            border-radius:$radius-sm;
+            padding:0.5rem;
+            margin:0;
+        }
+        .name{
+            color:$white;
+            padding-left: 4px;
+            margin:0;
+        }
         img{
             height:2.5rem;
             border-radius: $radius-sm;
@@ -15,62 +34,110 @@
     }
 }
 
-.menu {
-    .__list{
-        list-style: none;
-        padding:0;
-        margin:0;
-    }
+.menu__list{
+    list-style: none;
+    padding:0;
+    margin:0;
+}
 
-    .__item{
-        display: inline-block;
-        position: relative;
-        padding: 0.8rem;
-        > a:not(.button), span{
-            text-decoration:none;
-            color:$grey-lighter;
-            line-height:18px;
-        }
-        .--extandable{
+.menu__item{
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+    line-height:2rem;
+    text-transform: uppercase;
+    > a:not(.button), span{
+        text-decoration:none;
+        color:$white;
+        line-height:18px;
+    }
+}
+
+.menu__item--hover{
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+    line-height:2rem;
+    > a:not(.button), span{
+        &:hover, :active{
+            position: relative;
             &:after{
-                content: "\f078";
-                font-family: "Font Awesome 5 Free"; 
-                font-weight: 900;
-                margin-left: 0.2rem;
-                font-size: $size-7;
-                line-height:20px;
-                color:$grey-lightest;
+            position: absolute;
+            top: 0px;
+            left: -1rem;
+            content: "\f068";
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            font-size: 10px;
+            color: $fm-yellow;
+            transition-duration: .4s;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(.7,1,.7,1);
             }
-            &:hover:after{
-                content: "\f077";
-            }
-        }
-        .--active{
-            color: $white;
-        }
-
-        a.button{
-
         }
     }
+} 
 
+.menu__item--active{
+    @extend .menu__item;
+    > a:not(.button), span{
+        position:relative;
+        &:after{
+        position: absolute;
+        top: 0px;
+        left: -1rem;
+        content: "\f0c8";
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        font-size: 8px;
+        color: $fm-yellow;
+        transition-duration: .4s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(.7,1,.7,1);    
+        }
+    }
+}
 
-    .__dropdown{
-        display: none;
-        position:absolute;
-        top:35px;
-        left:0;
-        padding:0.75rem;
-        background: $black;
-        border-radius:$radius;
-        width:100%; /*could be px*/
-        .dropdown__item{
+.menu__item--extandable{
+    @extend .menu__item;
+    &:after{
+        content: "\f078";
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        margin-left: 0.2rem;
+        font-size: $size-7;
+        line-height:20px;
+        color:$grey-lighter;
+    }
+    &:hover:after{
+        content: "\f077";
+    }
+}
+
+.menu__dropdown{
+    display: none;
+    position:absolute;
+    top:35px;
+    left:0;
+    padding:0.75rem;
+    background: $black;
+    border-radius:$radius;
+    width:100%; /*could be px*/ 
+    .dropdown__item{
+        display: block;
+        a{
             display: block;
-            a{
-                display: block;
-                color:§text;
-                padding: 1rem 0.8rem;
-            }
+            color:§text;
+            padding: 1rem 0.8rem;
         }
     }
+}
+
+.nav-bar-fixed-top{
+        top: 0;
+        border-bottom:1px solid rgba($color: $fm-yellow, $alpha: 0.2);
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
 }

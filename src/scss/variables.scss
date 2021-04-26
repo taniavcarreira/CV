@@ -5,11 +5,10 @@ $black-bis: #222222 !default;
 $black-ter: #333333 !default;
 
 $grey-darker: #373737 !default;
-$grey-dark: #757d88 !default;
-$grey: #cdcdcd !default;
-$grey-light: #ADA9BB !default;
+$grey: #9e9e9e !default;
+$grey-dark:darken($grey, 10%)!default;
+$grey-light: lighten($grey, 10%)!default;
 $grey-lighter: #d9caca !default;
-$grey-lightest: #E5E8ED !default;
 
 $white: #fafafa !default;
 $white-bis: #fcf1f1 !default;
@@ -35,6 +34,9 @@ $fm-yellow:#F8E816 !default;
 $fm-yeloow-d:darken($fm-yellow, 10%)!default;
 $fm-yellow-l:lighten($fm-yellow, 10%)!default;
 
+$tc-green:#00c462!default;
+$tc-green-d:darken($fm-yellow, 10%)!default;
+$tc-green-l:lighten($fm-yellow, 10%)!default;
 
 // Other Colors
 
@@ -115,25 +117,6 @@ $weight-bolder: 900 !default;
 // Spacing
 
 $block-spacing: 1.5rem !default;
-
-// Responsiveness
-
-// The container horizontal gap, which acts as the offset for breakpoints
-$gap: 2rem !default;
-
-// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
-$tablet: 769px !default;
-
-// 960px container + 4rem
-$desktop: 960px + 2 * $gap !default;
-
-// 1152px container + 4rem
-$widescreen: 1152px + 2 * $gap !default;
-$widescreen-enabled: true !default;
-
-// 1344px container + 4rem
-$fullhd: 1344px + 2 * $gap !default;
-$fullhd-enabled: true !default;
 
 // Miscellaneous
 

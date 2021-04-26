@@ -1,9 +1,32 @@
 {% extends "layout.html" %}
 
-{% set title = 'Ytvieira' %}
+{% set title = 'Welcome' %}
+{% set page = 'home' %}
 
 <!-- Main content -->
 {% block content %}
+<section class="tania">
+    <div class="container">
+        <div class="row">
+            <div class="column welcome">
+                <p class="is-5">Welcome to my world</p>
+                <h1 class="title is-1">
+                    Green apple, red apple ... who cares? as long it tastes like orange!
+                </h1>
+                <div>
+                    <h2 class="subtitle is-4 is-yellow">
+                    </h2>
+                    <a href="#" class="button is-info">Follow-me</a>
+                </div>
+            </div>
+            <div class="column">
+                <figure class="my-photo">
+
+                </figure>
+            </div>
+    </div>
+</section>
+
 {% endblock %}
 
 {% block js %}

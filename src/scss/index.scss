@@ -1,0 +1,33 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+@import 'normalize.scss';
+@import 'base.scss';
+
+@import 'components/sidebar.scss';
+@import 'components/tabs';
+@import 'components/sliders';
+@import 'components/buttons.scss';
+@import 'components/cards.scss';
+@import 'components/forms.scss';
+
+@import 'layout/grid.scss';
+@import 'layout/tania_hero.scss';
+@import 'layout/section.scss';
+
+@import 'elements/container.scss';
+@import 'elements/icon.scss';
+@import 'elements/image.scss';
+@import 'elements/link.scss';
+@import 'elements/text.scss';
+@import 'elements/title.scss';
+
+@import 'fontawesome/fontawesome.scss';
+
+// Fonts & typography
+@import 'fonts.scss';
+
+
+// Partials
+@import 'partials/footer.scss';
+@import 'partials/nav.scss';
