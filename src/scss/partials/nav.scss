@@ -1,14 +1,24 @@
 .header {
     display:flex;
     justify-content: space-between;
-    background-image: url(https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
-    padding:1rem;
-    min-height: 3rem;
+    background-color: $black;
+    padding:0.5rem;
+    min-height: 2rem;
     align-items:center;
+    .overlay{
+        position: absolute;
+        display:block;
+        background-color:rgba($color: $dark, $alpha: 0.5);
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+    }
     .logo__page-title{
+        clear:both;
         display:flex;
         padding: 0.5rem;
-        margin-left:2rem;
+        margin-left:5rem;
         float:left;
         color:$fm-yellow;
         font-size: $size-5;
@@ -34,10 +44,13 @@
     }
 }
 
+
+
 .menu__list{
     list-style: none;
     padding:0;
     margin:0;
+    margin-right:2rem;
 }
 
 .menu__item{
@@ -77,26 +90,29 @@
         }
     }
 } 
+/*"\f0c8" */
 
 .menu__item--active{
     @extend .menu__item;
     > a:not(.button), span{
         position:relative;
         &:after{
-        position: absolute;
-        top: 0px;
-        left: -1rem;
-        content: "\f0c8";
-        font-family: "Font Awesome 5 Free"; 
-        font-weight: 900;
-        font-size: 8px;
-        color: $fm-yellow;
-        transition-duration: .4s;
-        transition-property: all;
-        transition-timing-function: cubic-bezier(.7,1,.7,1);    
-        }
+            position: absolute;
+            top: 0px;
+            left: -1rem;
+            content: "\f0c8";
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900;
+            font-size: 8px;
+            color: $fm-yellow;
+            transition-duration: .4s;
+            transition-property: all;
+            transition-timing-function: cubic-bezier(.7,1,.7,1);    
+            }
     }
 }
+
+
 
 .menu__item--extandable{
     @extend .menu__item;

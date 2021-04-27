@@ -1,4 +1,4 @@
-/*@font-face {
+@font-face {
     font-family: 'Karla';
     src: url('fonts/karla/Karla-Light.eot');
     src: url('fonts/karla/Karla-Light.eot?#iefix') format('embedded-opentype'),
@@ -69,12 +69,16 @@
     font-style: normal;
     font-display: swap;
   }
-  /*
+
   
-  /*@font-face {
-    font-family: 'Tania';
-    src: url('fonts/tania/ShadowsIntoLight-Regular')format('truetype');
-    font-weight: 400;
-    font-style:normal;
+  @font-face {
+    font-family: 'inconsolata';
+    src: url('fonts/inconsolata/Inconsolata-Black.eot')format('truetype');
+    src: url('fonts/inconsolata/Inconsolata-Black.eot?#iefix') format('embedded-opentype'),
+      url('fonts/inconsolata/Inconsolata-Black.woff2') format('woff2'),
+      url('fonts/inconsolata/Inconsolata-Black.woff') format('woff'),
+      url('fonts/inconsolata/Inconsolata-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style:bolder;
     font-display: swap;
-  }*/
+  }

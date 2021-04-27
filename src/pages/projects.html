@@ -1,7 +1,51 @@
 {% extends "layout.html" %}
 
-{% set title = 'Prokects' %}
+{% set title = 'Proects' %}
 
 {% block content %}
+
+<main>
+    <!-- Main idea -->
+    <section>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="container-slide">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class="active"></li>
+                </ol>
+            </div>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item full-screen" style="height: 969px; background-image: url(&quot;img/1920x1080/01.jpg&quot;);">
+                    
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h1 class="carousel-title">Hi-Tech Design</h1>
+                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br> enim minim estudiat veniam siad venumus dolore</p>
+                            </div>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item full-screen active" style="height: 969px; background-image: url(&quot;img/1920x1080/02.jpg&quot;);">
+                    
+                    <div class="container">
+                        <div class="carousel-centered">
+                            <div class="margin-b-40">
+                                <h2 class="carousel-title">Hi-Tech Design</h2>
+                                <p>Lorem ipsum dolor amet consectetur adipiscing dolore magna aliqua <br> enim minim estudiat veniam siad venumus dolore</p>
+                            </div>
+                            <a href="#" class="btn-theme btn-theme-sm btn-white-brd text-uppercase">Explore</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
 
 {% endblock content %}

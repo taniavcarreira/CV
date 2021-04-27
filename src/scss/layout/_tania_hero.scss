@@ -1,5 +1,5 @@
 .tania{
-    background-image: url(https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+    background-color: $black;
     padding: 80px 0 0 0;
     margin:0;
     display: block;
@@ -10,12 +10,17 @@
     min-height: 100vh;
     width:100%;
     .welcome{
-        padding:2rem;
+        padding: 12rem 0;
         .title{
             color:$white;
+            font: Inconsolata;
         }
         .subtitle{
             color:$fm-yellow;
         }
+    }
+    .my-photo{
+        height: 250px;
+        width: auto;
     }
 }

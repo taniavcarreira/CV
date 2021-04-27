@@ -5,27 +5,137 @@
 
 <!-- Main content -->
 {% block content %}
-<section class="tania">
-    <div class="container">
-        <div class="row">
-            <div class="column welcome">
-                <p class="is-5">Welcome to my world</p>
-                <h1 class="title is-1">
-                    Green apple, red apple ... who cares? as long it tastes like orange!
+<main>
+    <!--Slider INTRO-->
+    <section id="section-1" class="section hero">
+        <div class="container">
+            <div id="heroCarousel" class="hero carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel__indicators">
+                    <li data-target="heroCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="heroCarousel" data-slide-to="1"></li>
+                    <li data-target="heroCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for sliders -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row is multiline">
+                            <h1 class="title is-5">Tania Carreira</h1>
+                            <h2 class="subtitle is-1 is-xl">
+                                Ecommerce Manager
+                                <br>
+                                Digital Marketing
+                                <br>
+                                Front-End Development
+                            </h2>
+                            <p class="text is-grey-light">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet praesentium
+                                suscipit porro inventore ut recusandae quidem alias. Numquam, eius perspiciatis!
+                            </p>
+                            <a href="#" class="button is-basic-info">EXPLORE</a>
+                        </div>
+                        <div>
+                            <figure class="image__slider">
+                                <img src="#" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row is multiline">
+                            <h1 class="title is-5">Tania Carreira</h1>
+                            <h2 class="subtitle is-1 is-xl">
+                                Ecommerce Manager
+                                <br>
+                                Digital Marketing
+                                <br>
+                                Front-End Development
+                            </h2>
+                            <p class="text is-grey-light">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet praesentium
+                                suscipit porro inventore ut recusandae quidem alias. Numquam, eius perspiciatis!
+                            </p>
+                            <a href="#" class="button is-basic-info">EXPLORE</a>
+                        </div>
+                        <div>
+                            <figure class="image__slider">
+                                <img src="#" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row is multiline">
+                            <h1 class="title is-5">Tania Carreira</h1>
+                            <h2 class="subtitle is-1 is-xl">
+                                Ecommerce Manager
+                                <br>
+                                Digital Marketing
+                                <br>
+                                Front-End Development
+                            </h2>
+                            <p class="text is-grey-light">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Amet praesentium
+                                suscipit porro inventore ut recusandae quidem alias. Numquam, eius perspiciatis!
+                            </p>
+                            <a href="#" class="button is-basic-info">EXPLORE</a>
+                        </div>
+                        <div>
+                            <figure class="image__slider">
+                                <img src="#" alt="">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!--left and right control-->
+                <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                    <span><i class="fa fa-chevron-left" aria-hidden="true"></i></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a href="#" class="right carousel-control" data-slide="prev">
+                    <span><i class="fa fa-chevron-right" aria-hidden="true"></i></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+    </section>
+
+
+
+
+
+
+    <section class="tania">
+        <div class="container">
+            <div class="welcome ">
+                <p class="subtitle is-5 is-yellow">Tania Vieira C.</p>
+                <h1 class="title is-1 is-uppercase">
+                    MARKETING DIGITAL
+                    <br>
+                    E-COMMERCE MANAGEMENT
+                    <br>
+                    FRONT-END DEVELOPMENT
                 </h1>
-                <div>
-                    <h2 class="subtitle is-4 is-yellow">
-                    </h2>
-                    <a href="#" class="button is-info">Follow-me</a>
+                <div class="tag-test text">tag-test</div>
+
+                <div class="row is-multine has-v-padding-sm">
+                    <p class="text is-3">
+                        Do you know
+                        <a href="" class="button is-primary">Find out more</a>
+                        <i class="fa fa-code" aria-hidden="true"></i>
                 </div>
             </div>
-            <div class="column">
-                <figure class="my-photo">
+        </div>
+        </div>
+    </section>
 
-                </figure>
-            </div>
-    </div>
-</section>
+
+</main>
+
+<style>
+
+</style>
 
 {% endblock %}
 

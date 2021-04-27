@@ -1,6 +1,6 @@
 // Primary Colors
 
-$black: #00071D !default;
+$black: #130b0d !default;
 $black-bis: #222222 !default;
 $black-ter: #333333 !default;
 
@@ -31,7 +31,7 @@ $fm-blue-d:darken($fm-blue, 10%)!default;
 $fm-blue-l:lighten($fm-blue, 10%)!default;
 
 $fm-yellow:#F8E816 !default;
-$fm-yeloow-d:darken($fm-yellow, 10%)!default;
+$fm-yellow-d:darken($fm-yellow, 10%)!default;
 $fm-yellow-l:lighten($fm-yellow, 10%)!default;
 
 $tc-green:#00c462!default;
@@ -93,8 +93,8 @@ $text: $dark;
 
 // Typography
 
-$family-sans-serif:  "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
-$family-sans:  "Spectral", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-sans-serif:  "Inconsolata", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
+$family-sans:  "Ubuntu", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system, !default;
 $family-monospace: monospace !default;
 $render-mode: optimizeLegibility !default;
 

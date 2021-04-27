@@ -1,9 +1,42 @@
-{% extends "layout.html" %}
+{% extends "skeleton.html" %}
 
 {% set title = 'Curriculum Vitae' %}
 
 <!-- Main content -->
 {% block content %}
+
+<section>
+    <div class="container is-large">
+        <div class="row">
+            <div class="column">
+                <span class="icon">
+                    <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                </span>
+                <h4 class="title is-4">
+                    2015
+                </h4>
+                <h5 class="title is-6">
+                    Art of the week
+                </h5>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nisi!
+                </p>
+            </div>
+            <div class="column has-background-grey">
+            <h1 class="title is-1">
+                Tania<br>Carreira
+            </h1>
+            <span class="tag">UK/UX Designer</span>
+            <div class="row is-small">
+                <div class="column">
+
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
 
 {% block js %}

@@ -1,4 +1,48 @@
 @charset "UTF-8";
+.button:not(.is-small) {
+  position: relative;
+  line-height: 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: .2s ease-in;
+  outline: 0 !important;
+  padding-bottom: 16px;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 48px;
+  line-height: 14px; }
+  .button:focus:not(.is-small), .is-focused.button:not(.is-small), .button:active:not(.is-small), .is-active.button:not(.is-small) {
+    outline: none;
+    box-shadow: none; }
+  .button[disabled]:not(.is-small),
+  fieldset[disabled] .button:not(.is-small) {
+    cursor: not-allowed; }
+
+.button.is-small {
+  position: relative;
+  line-height: 14px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: .2s ease-in;
+  outline: 0 !important;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 36px;
+  line-height: 12px; }
+  .button.is-small:focus, .is-focused.button.is-small, .button.is-small:active, .is-active.button.is-small {
+    outline: none;
+    box-shadow: none; }
+  .button.is-small[disabled],
+  fieldset[disabled] .button.is-small {
+    cursor: not-allowed; }
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -307,7 +351,7 @@ template {
 body {
   margin: 0;
   background: #fafafa;
-  font-family: "Spectral", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
+  font-family: "Ubuntu", "Roboto", "Oxygen", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system;
   font-size: 15px;
   display: flex;
   flex-direction: column;
@@ -325,8 +369,173 @@ body {
 main {
   clear: both; }
 
+.carousel {
+  position: relative; }
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden; }
+
+.buttons {
+  display: flex;
+  margin-top: 16px; }
+  .buttons.is-aligned-right {
+    justify-content: flex-end; }
+  .buttons.is-spaced-between {
+    justify-content: space-between; }
+
+.button {
+  color: #fafafa;
+  background-color: #373737;
+  text-decoration: none;
+  /*
+    Button white
+  */
+  /*
+    Button primary
+  */
+  /*
+    Button success
+  */
+  /*
+    Button warning TODO
+  */ }
+  .button:not(:last-child) {
+    margin-right: 8px; }
+  .button.is-fullwidth {
+    width: 100%; }
+  .button.is-large {
+    font-size: 20px; }
+  .button.is-white {
+    background-color: #fafafa;
+    color: #333; }
+    .button.is-white:hover {
+      cursor: pointer;
+      background: #e1e1e1; }
+  .button.is-primary {
+    border-color: #d5c606;
+    background-color: #F8E816;
+    color: #130b0d; }
+    .button.is-primary:hover {
+      cursor: pointer;
+      background: #d5c606;
+      font-weight: 700; }
+  .button.is-success {
+    border-color: #008d6b;
+    background-color: #00C092; }
+    .button.is-success:hover {
+      cursor: pointer;
+      background: #008d6b; }
+  .button.is-light {
+    border-color: #bfe0e2;
+    background-color: #E2F1F2;
+    color: #373737; }
+    .button.is-light:hover {
+      cursor: pointer;
+      background: #bfe0e2; }
+  .button.is-aqualight {
+    border-color: #bfe0e2;
+    background-color: #E2F1F2;
+    color: #00C092; }
+    .button.is-aqualight:hover {
+      cursor: pointer;
+      background-color: #00C092;
+      color: #fafafa; }
+  .button.is-info {
+    background-color: #3297c2;
+    border-color: #287799; }
+    .button.is-info:hover {
+      cursor: pointer;
+      background: #287799; }
+  .button.is-danger {
+    border-color: #db0b21;
+    background-color: #F4253B; }
+    .button.is-danger:hover {
+      cursor: pointer;
+      background: #db0b21; }
+  .button.is-warning {
+    border-color: #e8a404;
+    background-color: #FBBB24; }
+    .button.is-warning:hover {
+      cursor: pointer;
+      background: #e8a404; }
+
+/*
+ Page specific styles, not to be used in component
+*/
+.buttons-page code {
+  float: right;
+  line-height: 42px; }
+
+.card {
+  position: relative;
+  display: block;
+  background: #fafafa;
+  border-radius: 8px; }
+  .card:not(:last-child) {
+    margin-bottom: 30px; }
+  .card.hero__cta {
+    background: url(https://images.unsplash.com/photo-1550895030-823330fc2551?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80);
+    background-size: cover;
+    background-position: center center; }
+  .card.has-p-top {
+    padding-top: 250px; }
+  .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(250, 250, 250, 0.8);
+    z-index: 999; }
+  .card .card-content {
+    padding: 32px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin: -16px 0; }
+  .row.is-multiline {
+    flex-wrap: wrap;
+    align-items: center; }
+    .row.is-multiline .column {
+      padding: 8px; }
+  .row.is-small {
+    margin-left: -8px;
+    margin-right: -8px; }
+    .row.is-small .column {
+      padding: 8px; }
+  .row.is-large {
+    margin-left: -24px;
+    margin-right: -24px; }
+    .row.is-large .column {
+      padding: 24px; }
+  .row .column {
+    vertical-align: top;
+    box-sizing: border-box;
+    padding: 16px;
+    width: 100%; }
+    .row .column.is-3 {
+      width: 25%; }
+    .row .column.is-4 {
+      width: 33.3333333%; }
+    .row .column.is-5 {
+      width: 41.6666666667%; }
+    .row .column.is-6 {
+      width: 50%; }
+    .row .column.is-7 {
+      width: 58.3333333333%; }
+    .row .column.is-8 {
+      width: 66.6666666667%; }
+    .row .column.is-12 {
+      width: 100%; }
+
 .tania {
-  background-image: url(https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+  background-color: #130b0d;
   padding: 80px 0 0 0;
   margin: 0;
   display: block;
@@ -337,11 +546,15 @@ main {
   min-height: 100vh;
   width: 100%; }
   .tania .welcome {
-    padding: 2rem; }
+    padding: 12rem 0; }
     .tania .welcome .title {
-      color: #fafafa; }
+      color: #fafafa;
+      font: Inconsolata; }
     .tania .welcome .subtitle {
       color: #F8E816; }
+  .tania .my-photo {
+    height: 250px;
+    width: auto; }
 
 .section {
   padding: 32px 16px; }
@@ -350,8 +563,54 @@ main {
   margin: 0 auto;
   max-width: 1100px; }
   .container.is-small {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto; }
+
+.container_slider {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 1170px; }
+  .container_slider:before {
+    display: table;
+    content: " "; }
+  .container_slider:after {
+    clear: both;
+    display: table;
+    content: "/F405 "; }
+
+.carousel-indicators {
+  left: auto;
+  width: auto;
+  padding-left: 0;
+  margin-left: 0;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  list-style: none; }
+  .carousel-indicators.active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #fff; }
+  .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000\9;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #fff;
+    border-radius: 10px; }
+
+.image {
+  margin: 0; }
+  .image img {
+    display: block;
+    max-width: 100%; }
 
 .lead {
   font-size: 1.25rem;
@@ -367,7 +626,7 @@ main {
   .text.is-dark {
     color: #373737; }
   .text.is-black {
-    color: #00071D; }
+    color: #130b0d; }
   .text.is-success {
     color: #00C092; }
   .text.is-uppercase {
@@ -381,7 +640,7 @@ a {
 .title {
   margin: 0 0 16px 0;
   font-weight: 400;
-  font-family: "Karla", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system; }
+  font-family: "Inconsolata", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif, BlinkMacSystemFont, -apple-system; }
   .title.is-1 {
     font-size: 3rem;
     font-weight: 700; }
@@ -5030,97 +5289,82 @@ readers do not read off random characters that represent icons */
   position: static;
   width: auto; }
 
-/*@font-face {
-    font-family: 'Karla';
-    src: url('fonts/karla/Karla-Light.eot');
-    src: url('fonts/karla/Karla-Light.eot?#iefix') format('embedded-opentype'),
-        url('fonts/karla/Karla-Light.woff2') format('woff2'),
-        url('fonts/karla/Karla-Light.woff') format('woff'),
-        url('fonts/karla/Karla-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  
 @font-face {
-    font-family: 'Karla';
-    src: url('fonts/karla/Karla-Regular.eot');
-    src: url('fonts/karla/Karla-Regular.eot?#iefix') format('embedded-opentype'),
-        url('fonts/karla/Karla-Regular.woff2') format('woff2'),
-        url('fonts/karla/Karla-Regular.woff') format('woff'),
-        url('fonts/karla/Karla-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+  font-family: 'Karla';
+  src: url("fonts/karla/Karla-Light.eot");
+  src: url("fonts/karla/Karla-Light.eot?#iefix") format("embedded-opentype"), url("fonts/karla/Karla-Light.woff2") format("woff2"), url("fonts/karla/Karla-Light.woff") format("woff"), url("fonts/karla/Karla-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
 @font-face {
-    font-family: 'Karla';
-    src: url('fonts/karla/Karla-Bold.eot');
-    src: url('fonts/karla/Karla-Bold.eot?#iefix') format('embedded-opentype'),
-        url('fonts/karla/Karla-Bold.woff2') format('woff2'),
-        url('fonts/karla/Karla-Bold.woff') format('woff'),
-        url('fonts/karla/Karla-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+  font-family: 'Karla';
+  src: url("fonts/karla/Karla-Regular.eot");
+  src: url("fonts/karla/Karla-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/karla/Karla-Regular.woff2") format("woff2"), url("fonts/karla/Karla-Regular.woff") format("woff"), url("fonts/karla/Karla-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 @font-face {
-    font-family: 'Spectral';
-    src: url('fonts/spectral/Spectral-LightItalic.eot');
-    src: url('fonts/spectral/Spectral-LightItalic.eot?#iefix') format('embedded-opentype'),
-        url('fonts/spectral/Spectral-LightItalic.woff2') format('woff2'),
-        url('fonts/spectral/Spectral-LightItalic.woff') format('woff'),
-        url('fonts/spectral/Spectral-LightItalic.ttf') format('truetype');
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-  }
-  
+  font-family: 'Karla';
+  src: url("fonts/karla/Karla-Bold.eot");
+  src: url("fonts/karla/Karla-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/karla/Karla-Bold.woff2") format("woff2"), url("fonts/karla/Karla-Bold.woff") format("woff"), url("fonts/karla/Karla-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap; }
+
 @font-face {
-    font-family: 'Spectral';
-    src: url('fonts/spectral/Spectral-Light.eot');
-    src: url('fonts/spectral/Spectral-Light.eot?#iefix') format('embedded-opentype'),
-        url('fonts/spectral/Spectral-Light.woff2') format('woff2'),
-        url('fonts/spectral/Spectral-Light.woff') format('woff'),
-        url('fonts/spectral/Spectral-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
-  
+  font-family: 'Spectral';
+  src: url("fonts/spectral/Spectral-LightItalic.eot");
+  src: url("fonts/spectral/Spectral-LightItalic.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-LightItalic.woff2") format("woff2"), url("fonts/spectral/Spectral-LightItalic.woff") format("woff"), url("fonts/spectral/Spectral-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap; }
+
 @font-face {
-    font-family: 'Spectral';
-    src: url('fonts/spectral/Spectral-Medium.eot');
-    src: url('fonts/spectral/Spectral-Medium.eot?#iefix') format('embedded-opentype'),
-        url('fonts/spectral/Spectral-Medium.woff2') format('woff2'),
-        url('fonts/spectral/Spectral-Medium.woff') format('woff'),
-        url('fonts/spectral/Spectral-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
-  }
-  /*
-  
-  /*@font-face {
-    font-family: 'Tania';
-    src: url('fonts/tania/ShadowsIntoLight-Regular')format('truetype');
-    font-weight: 400;
-    font-style:normal;
-    font-display: swap;
-  }*/
+  font-family: 'Spectral';
+  src: url("fonts/spectral/Spectral-Light.eot");
+  src: url("fonts/spectral/Spectral-Light.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-Light.woff2") format("woff2"), url("fonts/spectral/Spectral-Light.woff") format("woff"), url("fonts/spectral/Spectral-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Spectral';
+  src: url("fonts/spectral/Spectral-Medium.eot");
+  src: url("fonts/spectral/Spectral-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/spectral/Spectral-Medium.woff2") format("woff2"), url("fonts/spectral/Spectral-Medium.woff") format("woff"), url("fonts/spectral/Spectral-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'inconsolata';
+  src: url("fonts/inconsolata/Inconsolata-Black.eot") format("truetype");
+  src: url("fonts/inconsolata/Inconsolata-Black.eot?#iefix") format("embedded-opentype"), url("fonts/inconsolata/Inconsolata-Black.woff2") format("woff2"), url("fonts/inconsolata/Inconsolata-Black.woff") format("woff"), url("fonts/inconsolata/Inconsolata-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: bolder;
+  font-display: swap; }
+
 .header {
   display: flex;
   justify-content: space-between;
-  background-image: url(https://images.unsplash.com/photo-1585314062340-f1a5a7c9328d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
-  padding: 1rem;
-  min-height: 3rem;
+  background-color: #130b0d;
+  padding: 0.5rem;
+  min-height: 2rem;
   align-items: center; }
+  .header .overlay {
+    position: absolute;
+    display: block;
+    background-color: rgba(55, 55, 55, 0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
   .header .logo__page-title {
+    clear: both;
     display: flex;
     padding: 0.5rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
     float: left;
     color: #F8E816;
     font-size: 1.25rem;
@@ -5144,7 +5388,8 @@ readers do not read off random characters that represent icons */
 .menu__list {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  margin-right: 2rem; }
 
 .menu__item, .menu__item--active, .menu__item--extandable {
   display: inline-block;
@@ -5177,6 +5422,7 @@ readers do not read off random characters that represent icons */
       transition-property: all;
       transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
 
+/*"\f0c8" */
 .menu__item--active > a:not(.button), .menu__item--active span {
   position: relative; }
   .menu__item--active > a:not(.button):after, .menu__item--active span:after {
@@ -5210,7 +5456,7 @@ readers do not read off random characters that represent icons */
   top: 35px;
   left: 0;
   padding: 0.75rem;
-  background: #00071D;
+  background: #130b0d;
   border-radius: 8px;
   width: 100%;
   /*could be px*/ }
