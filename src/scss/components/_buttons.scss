@@ -65,7 +65,24 @@ $button-text-color:$white;
       background: $fm-yellow-d;
       font-weight: $weight-bold;
     }
-}
+  }
+
+ /*
+    Button More info
+  */
+
+  &.is-find-out{
+    border-color: $white;
+    background-color: rgba($dark, $alpha: 0.6);
+    color: $white;
+    &:hover{
+      cursor: pointer;
+      background: $fm-yellow;
+      font-weight: $weight-bold;
+      color:$black;
+    }
+  }
+
 
   /*
     Button success

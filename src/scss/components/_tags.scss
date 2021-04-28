@@ -1,4 +1,22 @@
-.tag-test{
-    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 25% 50%, 0% 0%);
-    background:$white;
-}
+.tags{
+    display:flex;
+  }
+  
+  .tag{
+    padding:8px;
+    border-radius:8px;
+    height:35px;
+    font-weight:600;
+    &.is-primary{
+      background-color: $primary;
+      color:#fff;
+    }
+    &.is-aqualight{
+      color: $success;
+      background:#C9F7F4;
+    }
+    &.is-yellow{
+      background-color: $warning;
+      color:#000;
+    }
+  }

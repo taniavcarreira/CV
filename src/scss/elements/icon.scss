@@ -1,0 +1,44 @@
+.icon {
+    display:inline-block;
+    padding: 8px;
+    border-radius: 8px;
+    i{
+      display:block;
+    }
+    &.is-hoverable{
+      cursor: pointer;
+      transition:.2s ease;
+    }
+    &.is-green {
+      color: $green;
+      background:$aqualight;
+      &.is-hoverable{
+        &:hover{
+          background: $green;
+          color:$aqualight;
+        }
+      }
+    }
+    &.is-red {
+      color: $red;
+      background:$quartz;
+      &.is-hoverable{
+        &:hover{
+          background: $red;
+          color:$quartz;
+        }
+      }
+    }
+    &.is-blue {
+      color: $blue;
+      background:$ivory;
+      &.is-hoverable{
+        &:hover{
+          background: $blue;
+          color:$ivory;
+        }
+      }
+    }
+  
+  }
+  

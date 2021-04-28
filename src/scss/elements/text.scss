@@ -1,30 +1,61 @@
 .lead{
-    font-size: $size-5;
-    margin-bottom:10px;
-}
-
-.text{
-    color:$text;
-    margin-bottom: 10px;
+    font-size:18px;
+    margin-bottom:1rem;
+    margin-top:0;
     &.is-primary{
-        color: $primary;
+      color: $primary;
     }
-    &.is-grey{
-        color: $grey;
+    &.is-grey-lighter {
+      color: $grey-lighter;
     }
-    &.is-dark{
-        color: $dark;
+    
+    &.is-dark {
+      color: $dark;
     }
-    &.is-black{
-        color:$black;
+    &.is-black {
+      color: $black;
     }
+    
     &.is-success{
-        color: $success;
+      color:$success;
     }
     &.is-uppercase{
-        text-transmform: uppercase;
+      text-transform: uppercase;
     }
-    &.is-strong{
-        font-weight: 800;
-    }
+    
+    &.is-strong {
+      font-weight: 800;
+  }
 }
+  
+  .text{
+    color:$text;
+    margin-bottom:1rem;
+    margin-top:0;
+    line-height: 22px;
+  
+    &.is-primary{
+      color: $primary;
+    }
+    &.is-grey-lighter {
+      color: $grey-lighter;
+    }
+    
+    &.is-dark {
+      color: $dark;
+    }
+    &.is-black {
+      color: $black;
+    }
+    
+    &.is-success{
+      color:$success;
+    }
+    &.is-uppercase{
+      text-transform: uppercase;
+    }
+    
+    &.is-strong {
+      font-weight: 800;
+    }
+  }
