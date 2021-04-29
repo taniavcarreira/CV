@@ -383,31 +383,31 @@ main {
   background-color: #373737;
   border-radius: 4px; }
 
-.sidebar .menu__item .fa-chevron-up, .sidebar .menu__item--active .fa-chevron-up, .sidebar .menu__item--extandable .fa-chevron-up {
+.sidebar .menu__item .fa-chevron-up, .sidebar .vertical-nav .menu__item--active .fa-chevron-up, .vertical-nav .sidebar .menu__item--active .fa-chevron-up, .sidebar .menu .menu__list .menu__item--active .fa-chevron-up, .menu .menu__list .sidebar .menu__item--active .fa-chevron-up, .sidebar .menu__item--extandable .fa-chevron-up {
   display: none; }
 
-.sidebar .menu__item .fa-chevron-down, .sidebar .menu__item--active .fa-chevron-down, .sidebar .menu__item--extandable .fa-chevron-down {
+.sidebar .menu__item .fa-chevron-down, .sidebar .vertical-nav .menu__item--active .fa-chevron-down, .vertical-nav .sidebar .menu__item--active .fa-chevron-down, .sidebar .menu .menu__list .menu__item--active .fa-chevron-down, .menu .menu__list .sidebar .menu__item--active .fa-chevron-down, .sidebar .menu__item--extandable .fa-chevron-down {
   display: inline-block; }
 
-.sidebar .menu__item:hover .fa-chevron-up, .sidebar .menu__item--active:hover .fa-chevron-up, .sidebar .menu__item--extandable:hover .fa-chevron-up {
+.sidebar .menu__item:hover .fa-chevron-up, .sidebar .vertical-nav .menu__item--active:hover .fa-chevron-up, .vertical-nav .sidebar .menu__item--active:hover .fa-chevron-up, .sidebar .menu .menu__list .menu__item--active:hover .fa-chevron-up, .menu .menu__list .sidebar .menu__item--active:hover .fa-chevron-up, .sidebar .menu__item--extandable:hover .fa-chevron-up {
   display: inline-block; }
 
-.sidebar .menu__item:hover .fa-chevron-down, .sidebar .menu__item--active:hover .fa-chevron-down, .sidebar .menu__item--extandable:hover .fa-chevron-down {
+.sidebar .menu__item:hover .fa-chevron-down, .sidebar .vertical-nav .menu__item--active:hover .fa-chevron-down, .vertical-nav .sidebar .menu__item--active:hover .fa-chevron-down, .sidebar .menu .menu__list .menu__item--active:hover .fa-chevron-down, .menu .menu__list .sidebar .menu__item--active:hover .fa-chevron-down, .sidebar .menu__item--extandable:hover .fa-chevron-down {
   display: none; }
 
-.sidebar .menu__item:hover .dropdown, .sidebar .menu__item--active:hover .dropdown, .sidebar .menu__item--extandable:hover .dropdown {
+.sidebar .menu__item:hover .dropdown, .sidebar .vertical-nav .menu__item--active:hover .dropdown, .vertical-nav .sidebar .menu__item--active:hover .dropdown, .sidebar .menu .menu__list .menu__item--active:hover .dropdown, .menu .menu__list .sidebar .menu__item--active:hover .dropdown, .sidebar .menu__item--extandable:hover .dropdown {
   display: block; }
 
-.sidebar .menu__item, .sidebar .menu__item--active, .sidebar .menu__item--extandable {
+.sidebar .menu__item, .sidebar .vertical-nav .menu__item--active, .vertical-nav .sidebar .menu__item--active, .sidebar .menu .menu__list .menu__item--active, .menu .menu__list .sidebar .menu__item--active, .sidebar .menu__item--extandable {
   display: block; }
 
-.sidebar .menu__item a, .sidebar .menu__item--active a, .sidebar .menu__item--extandable a {
+.sidebar .menu__item a, .sidebar .vertical-nav .menu__item--active a, .vertical-nav .sidebar .menu__item--active a, .sidebar .menu .menu__list .menu__item--active a, .menu .menu__list .sidebar .menu__item--active a, .sidebar .menu__item--extandable a {
   display: block;
   padding: 12px 0;
   text-decoration: none;
   color: #373737; }
 
-.sidebar .menu__item a:hover, .sidebar .menu__item--active a:hover, .sidebar .menu__item--extandable a:hover {
+.sidebar .menu__item a:hover, .sidebar .vertical-nav .menu__item--active a:hover, .vertical-nav .sidebar .menu__item--active a:hover, .sidebar .menu .menu__list .menu__item--active a:hover, .menu .menu__list .sidebar .menu__item--active a:hover, .sidebar .menu__item--extandable a:hover {
   color: #FF7A5C; }
 
 .sidebar .dropdown {
@@ -423,9 +423,9 @@ main {
   bottom: 0;
   width: 60px;
   background: #333333; }
-  .vertical-nav .menu__item, .vertical-nav .menu__item--active, .vertical-nav .menu__item--extandable {
+  .vertical-nav .menu__item, .vertical-nav .menu__item--active, .vertical-nav .menu .menu__list .menu__item--active, .menu .menu__list .vertical-nav .menu__item--active, .vertical-nav .menu__item--extandable {
     display: block; }
-    .vertical-nav .menu__item a, .vertical-nav .menu__item--active a, .vertical-nav .menu__item--extandable a {
+    .vertical-nav .menu__item a, .vertical-nav .menu__item--active a, .vertical-nav .menu .menu__list .menu__item--active a, .menu .menu__list .vertical-nav .menu__item--active a, .vertical-nav .menu__item--extandable a {
       display: block;
       padding: 5px;
       color: #d9caca;
@@ -718,7 +718,7 @@ body.sidebar-open {
     .row .column.is-12 {
       width: 100%; }
 
-.tania {
+.hero {
   background-image: url(https://images.unsplash.com/photo-1513708929605-6dd0e1b081bd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1355&q=80);
   background-position: center;
   background-repeat: no-repeat;
@@ -732,12 +732,12 @@ body.sidebar-open {
   clear: both;
   min-height: 100vh;
   width: 100%; }
-  .tania .welcome {
+  .hero .welcome {
     padding: 12rem 0; }
-    .tania .welcome .title {
+    .hero .welcome .title {
       color: #fafafa;
       font: Inconsolata; }
-    .tania .welcome .subtitle {
+    .hero .welcome .subtitle {
       color: #F8E816; }
 
 .section {
@@ -819,6 +819,9 @@ body.sidebar-open {
   font-size: 18px;
   margin-bottom: 1rem;
   margin-top: 0; }
+  @media screen and (max-width: 412px) {
+    .lead {
+      font-size: 0.85rem; } }
   .lead.is-primary {
     color: #FF7A5C; }
   .lead.is-grey-lighter {
@@ -880,6 +883,9 @@ body.sidebar-open {
     font-size: 1.25rem; }
     .title.is-5 + .subtitle {
       font-size: 1rem; }
+    @media screen and (max-width: 412px) {
+      .title.is-5 {
+        font-size: 1rem; } }
   .title.is-6 {
     font-size: 1rem; }
     .title.is-6 + .subtitle {
@@ -897,25 +903,53 @@ body.sidebar-open {
         .title ~ .subtitle span.has-hover-bg-white:hover::before {
           z-index: -1;
           position: absolute;
-          top: 7px;
-          left: -10px;
           background-color: #fafafa;
           border-radius: 4px;
           opacity: 1;
-          width: 370px;
-          height: 4rem;
           content: ''; }
+          @media screen and (min-width: 768px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::before {
+              top: 7px;
+              left: -10px;
+              width: 370px;
+              height: 4rem; } }
+          @media screen and (max-width: 768px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::before {
+              top: 5px;
+              left: -5px;
+              width: 165px;
+              height: 2rem; } }
+          @media screen and (max-width: 412px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::before {
+              top: 3px;
+              left: -5px;
+              width: 143px;
+              height: 1.5rem; } }
         .title ~ .subtitle span.has-hover-bg-white:hover::after {
           z-index: -2;
           position: absolute;
-          top: -5px;
-          left: 30px;
           background-color: #F8E816;
           border-radius: 4px;
           opacity: 0.8;
-          width: 100%;
-          height: 4rem;
           content: ''; }
+          @media screen and (min-width: 768px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::after {
+              top: -5px;
+              left: 30px;
+              width: 100%;
+              height: 4rem; } }
+          @media screen and (max-width: 768px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::after {
+              top: 0px;
+              left: 20px;
+              width: 100%;
+              height: 2rem; } }
+          @media screen and (max-width: 412px) {
+            .title ~ .subtitle span.has-hover-bg-white:hover::after {
+              top: -2px;
+              left: 20px;
+              width: 90%;
+              height: 1.5rem; } }
 
 .subtitle {
   margin-top: -8px;
@@ -5617,8 +5651,14 @@ readers do not read off random characters that represent icons */
 .margin-t--40 {
   margin-top: 40px !important; }
 
-.margin-t--250 {
-  margin-top: 250px  !important; }
+.margin-t--10 {
+  margin-top: 10px !important; }
+
+.padding-left--100 {
+  padding-left: 100px; }
+
+.margin-t--25vh {
+  margin-top: 25vh  !important; }
 
 .has-text-center {
   text-align: center; }
@@ -5644,9 +5684,20 @@ readers do not read off random characters that represent icons */
 .has-text-white {
   color: #fafafa !important; }
 
-.has-text-size-xl {
-  font-size: 4.5rem !important;
-  margin-bottom: 1rem !important; }
+@media screen and (min-width: 768px) {
+  .has-text-size-xl {
+    font-size: 4.5rem !important;
+    margin-bottom: 1rem !important; } }
+
+@media screen and (max-width: 768px) {
+  .has-text-size-xl {
+    font-size: 2rem !important;
+    margin-bottom: 1.5rem !important; } }
+
+@media screen and (max-width: 412px) {
+  .has-text-size-xl {
+    font-size: 1.7rem !important;
+    margin-bottom: 1.5rem !important; } }
 
 .has-text-size-1 {
   font-size: 3rem !important; }
@@ -5770,20 +5821,12 @@ readers do not read off random characters that represent icons */
   vertical-align: top; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
   background-color: transparent;
   padding: 0.5rem;
   min-height: 2rem;
-  align-items: center; }
-  .header .overlay {
-    position: absolute;
-    display: block;
-    background-color: rgba(55, 55, 55, 0.5);
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; }
+  align-items: center;
+  display: flex;
+  justify-content: space-between; }
   .header .logo__page-title {
     clear: both;
     display: flex;
@@ -5794,6 +5837,8 @@ readers do not read off random characters that represent icons */
     font-size: 1.25rem;
     align-items: center;
     margin: 4px; }
+    .header .logo__page-title a {
+      text-decoration: none; }
     .header .logo__page-title .icon {
       display: inline-block;
       background-color: rgba(255, 255, 255, 0.2);
@@ -5809,58 +5854,159 @@ readers do not read off random characters that represent icons */
       height: 2.5rem;
       border-radius: 4px; }
 
-.menu__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  margin-right: 2rem; }
-
-.menu__item, .vertical-nav .menu__item--active, .menu__item--active, .menu__item--extandable {
-  display: inline-block;
-  position: relative;
-  padding: 1rem;
-  line-height: 2rem;
-  text-transform: uppercase; }
-  .menu__item > a:not(.button), .vertical-nav .menu__item--active > a:not(.button), .menu__item--active > a:not(.button), .menu__item--extandable > a:not(.button), .menu__item span, .vertical-nav .menu__item--active span, .menu__item--active span, .menu__item--extandable span {
-    text-decoration: none;
-    color: #fafafa;
-    line-height: 18px; }
-
-.menu__item--hover {
-  display: inline-block;
-  position: relative;
-  padding: 1rem;
-  line-height: 2rem; }
-  .menu__item--hover > a:not(.button):hover, .menu__item--hover > a:not(.button) :active, .menu__item--hover span:hover, .menu__item--hover span :active {
-    position: relative; }
-    .menu__item--hover > a:not(.button):hover:after, .menu__item--hover > a:not(.button) :active:after, .menu__item--hover span:hover:after, .menu__item--hover span :active:after {
+.menu {
+  /* .menu :: for mobile and tablet */ }
+  .menu .menu__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 2rem; }
+  .menu .menu__item, .menu .vertical-nav .menu__item--active, .vertical-nav .menu .menu__item--active, .menu .menu__list .menu__item--active, .menu .menu__item--extandable {
+    display: inline-block;
+    position: relative;
+    padding: 0.5rem 1rem;
+    line-height: 1rem;
+    text-transform: uppercase; }
+    .menu .menu__item > a:not(.button), .menu .vertical-nav .menu__item--active > a:not(.button), .vertical-nav .menu .menu__item--active > a:not(.button), .menu .menu__list .menu__item--active > a:not(.button), .menu .menu__item--extandable > a:not(.button),
+    .menu .menu__item span,
+    .menu .vertical-nav .menu__item--active span,
+    .vertical-nav .menu .menu__item--active span,
+    .menu .menu__list .menu__item--active span,
+    .menu .menu__item--extandable span {
+      color: #fafafa;
+      text-decoration: none; }
+      @media screen and (min-widtg: 768px) {
+        .menu .menu__item > a:not(.button), .menu .vertical-nav .menu__item--active > a:not(.button), .vertical-nav .menu .menu__item--active > a:not(.button), .menu .menu__list .menu__item--active > a:not(.button), .menu .menu__item--extandable > a:not(.button),
+        .menu .menu__item span,
+        .menu .vertical-nav .menu__item--active span,
+        .vertical-nav .menu .menu__item--active span,
+        .menu .menu__list .menu__item--active span,
+        .menu .menu__item--extandable span {
+          color: #fafafa;
+          line-height: 1rem; } }
+      @media screen and (min-widtg: 768px) {
+        .menu .menu__item > a:not(.button), .menu .vertical-nav .menu__item--active > a:not(.button), .vertical-nav .menu .menu__item--active > a:not(.button), .menu .menu__list .menu__item--active > a:not(.button), .menu .menu__item--extandable > a:not(.button),
+        .menu .menu__item span,
+        .menu .vertical-nav .menu__item--active span,
+        .vertical-nav .menu .menu__item--active span,
+        .menu .menu__list .menu__item--active span,
+        .menu .menu__item--extandable span {
+          color: #858585; } }
+    @media screen and (min-width: 768px) {
+      .menu .menu__item .button, .menu .vertical-nav .menu__item--active .button, .vertical-nav .menu .menu__item--active .button, .menu .menu__list .menu__item--active .button, .menu .menu__item--extandable .button {
+        margin-left: 0.5rem; } }
+    @media screen and (max-width: 768px) {
+      .menu .menu__item .button, .menu .vertical-nav .menu__item--active .button, .vertical-nav .menu .menu__item--active .button, .menu .menu__list .menu__item--active .button, .menu .menu__item--extandable .button {
+        margin-top: 3rem; } }
+    .menu .menu__item.menu__item--hover, .menu .vertical-nav .menu__item--hover.menu__item--active, .vertical-nav .menu .menu__item--hover.menu__item--active, .menu .menu__list .menu__item--hover.menu__item--active, .menu .menu__item--hover.menu__item--extandable {
+      display: inline-block;
+      position: relative;
+      padding: 1rem;
+      line-height: 2rem; }
+      .menu .menu__item.menu__item--hover > a:not(.button), .menu .vertical-nav .menu__item--hover.menu__item--active > a:not(.button), .vertical-nav .menu .menu__item--hover.menu__item--active > a:not(.button), .menu .menu__list .menu__item--hover.menu__item--active > a:not(.button), .menu .menu__item--hover.menu__item--extandable > a:not(.button), .menu .menu__item.menu__item--hover span, .menu .vertical-nav .menu__item--hover.menu__item--active span, .vertical-nav .menu .menu__item--hover.menu__item--active span, .menu .menu__list .menu__item--hover.menu__item--active span, .menu .menu__item--hover.menu__item--extandable span {
+        position: relative; }
+        .menu .menu__item.menu__item--hover > a:not(.button):hover:after, .menu .vertical-nav .menu__item--hover.menu__item--active > a:not(.button):hover:after, .vertical-nav .menu .menu__item--hover.menu__item--active > a:not(.button):hover:after, .menu .menu__list .menu__item--hover.menu__item--active > a:not(.button):hover:after, .menu .menu__item--hover.menu__item--extandable > a:not(.button):hover:after, .menu .menu__item.menu__item--hover > a:not(.button) :active:after, .menu .vertical-nav .menu__item--hover.menu__item--active > a:not(.button) :active:after, .vertical-nav .menu .menu__item--hover.menu__item--active > a:not(.button) :active:after, .menu .menu__list .menu__item--hover.menu__item--active > a:not(.button) :active:after, .menu .menu__item--hover.menu__item--extandable > a:not(.button) :active:after, .menu .menu__item.menu__item--hover span:hover:after, .menu .vertical-nav .menu__item--hover.menu__item--active span:hover:after, .vertical-nav .menu .menu__item--hover.menu__item--active span:hover:after, .menu .menu__list .menu__item--hover.menu__item--active span:hover:after, .menu .menu__item--hover.menu__item--extandable span:hover:after, .menu .menu__item.menu__item--hover span :active:after, .menu .vertical-nav .menu__item--hover.menu__item--active span :active:after, .vertical-nav .menu .menu__item--hover.menu__item--active span :active:after, .menu .menu__list .menu__item--hover.menu__item--active span :active:after, .menu .menu__item--hover.menu__item--extandable span :active:after {
+          position: absolute;
+          top: -8px;
+          left: -1rem;
+          content: "\f068";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          font-size: 10px;
+          color: #F8E816;
+          transition-duration: .4s;
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+  @media screen and (max-width: 768px) {
+    .menu .menu__list .menu__item--active > a:not(.button), .menu .menu__list .menu__item--active span {
+      color: #130b0d;
+      font-weight: 500; } }
+  @media screen and (min-width: 768px) {
+    .menu .menu__list .menu__item--active > a:not(.button), .menu .menu__list .menu__item--active span {
+      position: relative; }
+      .menu .menu__list .menu__item--active > a:not(.button):after, .menu .menu__list .menu__item--active span:after {
+        position: absolute;
+        top: 0px;
+        left: -1rem;
+        content: "\f0c8";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        font-size: 8px;
+        color: #F8E816;
+        transition-duration: .4s;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); } }
+  @media screen and (max-width: 768px) {
+    .menu {
       position: absolute;
-      top: 0px;
-      left: -1rem;
-      content: "\f068";
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 10px;
-      color: #F8E816;
-      transition-duration: .4s;
-      transition-property: all;
-      transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      padding: 3rem;
+      padding-top: 6rem;
+      background: #130b0d;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+      z-index: 1; }
+      .menu .menu__item, .menu .vertical-nav .menu__item--active, .vertical-nav .menu .menu__item--active, .menu .menu__list .menu__item--active, .menu .menu__item--extandable {
+        display: block;
+        color: #858585; }
+        .menu .menu__item a:not(.button), .menu .vertical-nav .menu__item--active a:not(.button), .vertical-nav .menu .menu__item--active a:not(.button), .menu .menu__list .menu__item--active a:not(.button), .menu .menu__item--extandable a:not(.button) {
+          font-size: 2rem; } }
 
-/*"\f0c8" */
-.menu__item--active > a:not(.button), .menu__item--active span {
-  position: relative; }
-  .menu__item--active > a:not(.button):after, .menu__item--active span:after {
-    position: absolute;
-    top: 0px;
-    left: -1rem;
-    content: "\f0c8";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 8px;
-    color: #F8E816;
-    transition-duration: .4s;
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.7, 1, 0.7, 1); }
+input {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 4rem;
+  width: 4rem;
+  opacity: 0;
+  z-index: 3; }
+  input ~ span {
+    z-index: 2;
+    display: flex;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #fafafa;
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    margin-left: auto; }
+    @media screen and (min-width: 768px) {
+      input ~ span {
+        display: none; } }
+    input ~ span:first-child {
+      transform-origin: 0% 0%; }
+    input ~ span:nth-last-child(2) {
+      transform-origin: 0% 100%; }
+  input:checked {
+    /* 
+       * Transform all the slices of hamburger
+       * into a crossmark.
+       */
+    /*
+       * But let's hide the middle one.
+       */
+    /*
+       * Ohyeah and the last one should go the other direction
+       */ }
+    input:checked ~ span {
+      background: #F8E816;
+      transform: rotate(45deg) translate(-2px, -1px);
+      opacity: 1; }
+    input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2); }
+    input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px); }
+    input:checked:nth-last-child(2) {
+      transform-origin: 0% 100%; }
+    input:checked ~ .menu {
+      transform: translate(0, 0); }
 
 .menu__item--extandable:after {
   content: "\f078";

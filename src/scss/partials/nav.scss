@@ -1,19 +1,11 @@
 .header {
-    display:flex;
-    justify-content: space-between;
     background-color: transparent;
     padding:0.5rem;
     min-height: 2rem;
     align-items:center;
-    .overlay{
-        position: absolute;
-        display:block;
-        background-color:rgba($color: $dark, $alpha: 0.5);
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-    }
+        display:flex;
+        justify-content: space-between; 
+    
     .logo__page-title{
         clear:both;
         display:flex;
@@ -24,6 +16,9 @@
         font-size: $size-5;
         align-items:center;
         margin:4px;
+        a{
+            text-decoration: none;
+        }
         .icon{
             display:inline-block;
             background-color: rgba($color: white, $alpha: 0.2);
@@ -43,76 +38,184 @@
         }
     }
 }
-
-
-
-.menu__list{
-    list-style: none;
-    padding:0;
-    margin:0;
-    margin-right:2rem;
-}
-
-.menu__item{
-    display: inline-block;
-    position: relative;
-    padding: 1rem;
-    line-height:2rem;
-    text-transform: uppercase;
-    > a:not(.button), span{
-        text-decoration:none;
-        color:$white;
-        line-height:18px;
+.menu {
+    .menu__list{
+        list-style: none;
+        padding:0;
+        margin:0;
+        margin-right:2rem;
     }
-}
-
-.menu__item--hover{
-    display: inline-block;
-    position: relative;
-    padding: 1rem;
-    line-height:2rem;
-    > a:not(.button), span{
-        &:hover, :active{
+    .menu__item{
+        display: inline-block;
+        position: relative;
+        padding: 0.5rem 1rem;
+        line-height:1rem;
+        text-transform: uppercase;
+        > a:not(.button), 
+        span{
+            color:$white;
+            text-decoration:none;
+            @media screen and (min-widtg:768px) {
+            color:$white;
+            line-height: 1rem;
+            }
+            @media screen and (min-widtg:768px) {
+                color:$grey-dark;
+            }
+        }    
+        .button {
+            @media screen and (min-width: 768px) {
+            margin-left: 0.5rem;
+            }
+            @media screen and (max-width: 768px) {
+            margin-top: 3rem;
+            }
+        }
+        &.menu__item--hover{
+            display: inline-block;
             position: relative;
-            &:after{
-            position: absolute;
-            top: 0px;
-            left: -1rem;
-            content: "\f068";
-            font-family: "Font Awesome 5 Free"; 
-            font-weight: 900;
-            font-size: 10px;
-            color: $fm-yellow;
-            transition-duration: .4s;
-            transition-property: all;
-            transition-timing-function: cubic-bezier(.7,1,.7,1);
+            padding: 1rem;
+            line-height:2rem;
+            > a:not(.button), span{
+                position: relative;
+                &:hover, :active{
+                    &:after{
+                    position: absolute;
+                    top: -8px;
+                    left: -1rem;
+                    content: "\f068";
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900;
+                    font-size: 10px;
+                    color: $fm-yellow;
+                    transition-duration: .4s;
+                    transition-property: all;
+                    transition-timing-function: cubic-bezier(.7,1,.7,1);
+                    }
+                }
+            }
+        } 
+    } 
+    .menu__list .menu__item--active{
+        @extend .menu__item;
+        > a:not(.button), span{
+            @media screen and (max-width: 768px) {
+                color: $black;
+                font-weight: $weight-medium;
+            }
+            @media screen and (min-width: 768px) {
+                position:relative;
+                &:after{
+                    position: absolute;
+                    top: 0px;
+                    left: -1rem;
+                    content: "\f0c8";
+                    font-family: "Font Awesome 5 Free"; 
+                    font-weight: 900;
+                    font-size: 8px;
+                    color: $fm-yellow;
+                    transition-duration: .4s;
+                    transition-property: all;
+                    transition-timing-function: cubic-bezier(.7,1,.7,1);    
+                }
             }
         }
     }
-} 
-/*"\f0c8" */
-
-.menu__item--active{
-    @extend .menu__item;
-    > a:not(.button), span{
-        position:relative;
-        &:after{
-            position: absolute;
-            top: 0px;
-            left: -1rem;
-            content: "\f0c8";
-            font-family: "Font Awesome 5 Free"; 
-            font-weight: 900;
-            font-size: 8px;
-            color: $fm-yellow;
-            transition-duration: .4s;
-            transition-property: all;
-            transition-timing-function: cubic-bezier(.7,1,.7,1);    
+        /* .menu :: for mobile and tablet */
+        @media screen and (max-width: 768px) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        padding: 3rem;
+        padding-top: 6rem;
+        background: $black;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        z-index: 1;
+        .menu__item {
+            display: block;
+            color: $grey-dark;
+            a:not(.button) {
+                font-size: $size-3;
             }
+        }
     }
 }
 
+input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 4rem;
+    width: 4rem;
+    opacity: 0;
+    z-index: 3;
+    ~ span {
+      z-index: 2;
+      display: flex;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: $white;
+      border-radius: 3px;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      opacity 0.55s ease;
+      margin-left: auto;
 
+      @media screen and (min-width: 768px) {
+        display:none;
+      }
+      &:first-child {
+        transform-origin: 0% 0%;
+      }
+  
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+    }
+  
+    &:checked {
+      ~ span {
+        background: $fm-yellow;
+        transform: rotate(45deg) translate(-2px, -1px);
+        opacity: 1;
+      }
+  
+      /* 
+       * Transform all the slices of hamburger
+       * into a crossmark.
+       */
+  
+      /*
+       * But let's hide the middle one.
+       */
+      ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+  
+      /*
+       * Ohyeah and the last one should go the other direction
+       */
+      ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+      }
+  
+      &:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+  
+      ~ .menu {
+        transform: translate(0, 0);
+      }
+    }
+  }
+  
 
 .menu__item--extandable{
     @extend .menu__item;
@@ -129,7 +232,6 @@
         content: "\f077";
     }
 }
-
 .menu__dropdown{
     display: none;
     position:absolute;
@@ -148,12 +250,11 @@
         }
     }
 }
-
-.nav-bar-fixed-top{
-        top: 0;
-        border-bottom:1px solid rgba($color: $fm-yellow, $alpha: 0.2);
-        position: fixed;
-        right: 0;
-        left: 0;
-        z-index: 1030;
+.nav-bar-fixed-top {
+    top: 0;
+    border-bottom:1px solid rgba($color: $fm-yellow, $alpha: 0.2);
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }

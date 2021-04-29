@@ -1,4 +1,4 @@
-.title {
+  .title {
     margin: 0 0 16px;
     font-weight: $weight-normal;
     font-family: $family-sans;
@@ -38,6 +38,9 @@
       + .subtitle {
         font-size: $size-6;
       }
+      @media screen and (max-width: 412px) {
+        font-size:$size-6;
+      }
     }
     
     &.is-6 {
@@ -54,39 +57,76 @@
     ~.subtitle {
       margin-top: -16px;
       color:#4a4d57;
+
       span{
         position:relative;
         z-index: 1;
+
         &.has-hover-bg-white:hover{
           color:$dark;
+
           &::before{
             z-index:-1;
             position: absolute;
-            top:7px;
-            left:-10px;
             background-color: $white;
             border-radius:$radius-sm;
             opacity: 1;
-            width:370px;
-            height:4rem;
             content:'';
+            @media screen and (min-width: 768px) {
+              top:7px;
+              left:-10px;
+              width:370px;
+              height:4rem;
+            }
+            @media screen and (max-width: 768px) {
+              top:5px;
+              left:-5px;
+              width:165px;
+              height:2rem;
+            }            
+            @media screen and (max-width: 412px) {
+              top:3px;
+              left:-5px;
+              width:143px;
+              height:1.5rem;
+            }
+          
+          }
+
+          &::after{
+            z-index:-2;
+            position: absolute;
+            background-color: $fm-yellow;
+            border-radius:$radius-sm;
+            opacity: 0.8;
+            content:'';
+            @media screen and (min-width: 768px) {
+              top:-5px;
+              left:30px;
+              width:100%;
+              height:4rem;            
+            }
+            @media screen and (max-width: 768px) {
+              top:0px;
+              left:20px;
+              width:100%;
+              height:2rem; 
+            }            
+            @media screen and (max-width: 412px) {
+              top:-2px;
+              left:20px;
+              width:90%;
+              height:1.5rem;  
+            }
+          }
+
         }
-        &::after{
-          z-index:-2;
-          position: absolute;
-          top:-5px;
-          left:30px;
-          background-color: $fm-yellow;
-          border-radius:$radius-sm;
-          opacity: 0.8;
-          width:100%;
-          height:4rem;
-          content:'';
-      }
-      }
-    }  
+
+      } 
+
+    }
   }
-}
+
   .subtitle {
     margin-top:-8px;
     font-weight: 300;

@@ -30,8 +30,17 @@
   margin-top:40px!important;
 }
 
-.margin-t--250{
-  margin-top: 250px  !important;
+.margin-t--10{
+  margin-top:10px!important;
+}
+
+.padding-left--100{
+  padding-left:100px;
+}
+
+
+.margin-t--25vh{
+  margin-top: 25vh  !important;
 }
 .has-text-center{
   text-align: center;
@@ -61,8 +70,18 @@
 }
 
 .has-text-size-xl{
-  font-size:$size-xl!important;
-  margin-bottom:$block-spacing-sm!important;
+  @media screen and (min-width: 768px) {
+    font-size:$size-xl!important;
+    margin-bottom:$block-spacing-sm!important;
+    }
+  @media screen and (max-width: 768px) {
+    font-size:$size-3!important;
+    margin-bottom:$block-spacing!important;
+  }
+  @media screen and (max-width: 412px) {
+    font-size:1.70rem!important;
+    margin-bottom:$block-spacing!important;
+    }
 }
 
 .has-text-size-1{
