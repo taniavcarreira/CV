@@ -9,6 +9,7 @@ $grey: #9e9e9e !default;
 $grey-dark:darken($grey, 10%)!default;
 $grey-light: lighten($grey, 10%)!default;
 $grey-lighter: #d9caca !default;
+$grey-cv: #e1e7eb !important;
 
 $white: #fafafa !default;
 $white-bis: #fcf1f1 !default;
@@ -116,6 +117,14 @@ $weight-bolder: 900 !default;
 
 
 // Spacing
+
+$block-spacing-3xl: 9rem !default;
+
+$block-spacing-2xl: 6rem !default;
+
+$block-spacing-xl: 3rem !default;
+
+$block-spacing-lg: 2rem !default;
 
 $block-spacing: 1.5rem !default;
 

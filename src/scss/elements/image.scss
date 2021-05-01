@@ -3,5 +3,10 @@
   img{
     display:block;
     max-width:100%;
+    &.is-small{
+      width:50%;
+      height:auto;
+    }
   }
+
 }

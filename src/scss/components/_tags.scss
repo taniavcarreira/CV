@@ -3,10 +3,10 @@
   }
   
   .tag{
-    padding:8px;
-    border-radius:8px;
-    height:35px;
-    font-weight:600;
+    padding:0.5rem;
+    border-radius:$radius-sm;
+    min-height:27px;
+    font-weight:300;
     &.is-primary{
       background-color: $primary;
       color:#fff;
@@ -15,8 +15,30 @@
       color: $success;
       background:#C9F7F4;
     }
-    &.is-yellow{
-      background-color: $warning;
-      color:#000;
+    &.is-black{
+      color: $fm-yellow;
+      background: $black;
     }
-  }
+    &.is-yellow{
+      background-color: $fm-yellow;
+      color:$text;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
+      }
+    &.is-separator {
+      padding-right: 1.5rem;
+      overflow: hidden;
+      position: absolute;
+      margin-left: -4rem;
+      margin-top: -0.25rem;
+      &:after {
+        content: " ";
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        right:  -15px;
+        top: 50%;
+        transform: translateY(-51%) rotate(45deg);
+        background-color: $grey-cv;
+        }
+      }
+    }

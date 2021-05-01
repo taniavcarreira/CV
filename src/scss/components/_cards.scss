@@ -1,4 +1,4 @@
-$background:$white;
+$background:#ffffff;
 $padding:32px;
 
 .card{
@@ -17,6 +17,15 @@ $padding:32px;
   &.has-p-top{
     padding-top:250px;
   }
+
+  &.is-large{
+    margin:-0.85rem;
+  }
+
+  &.card__cv{
+    margin:$block-spacing-xs;
+    background:transparent;
+  }
   .overlay{
     position:absolute;
     top:0;
@@ -26,10 +35,38 @@ $padding:32px;
     background: rgba($color: #fafafa, $alpha: 0.8);
     z-index:999;
   }
+
   .card-content{
     padding:$padding;
     box-sizing: border-box;
     position: relative;
     z-index:1;
+    &.has-min-height--25vh{
+      min-height:25vh;
+    }
+    &.cv-right{
+      padding:0 $block-spacing-2xl;
+    }
   }
 }
+
+.card__cv{
+  position: relative;
+  display:block;
+  background:$background;
+  border-radius:$radius;
+  margin:$block-spacing-xs;
+  background:transparent;
+  &.is-grey{
+    background-color: $grey-cv;
+  }
+  &.cv-right{
+    padding:0 $block-spacing-2xl;
+  }
+  .card-content{
+    padding:$padding;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+    

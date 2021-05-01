@@ -2,6 +2,7 @@
     max-width: 1100px;
     margin: 0 auto;
     padding: 1rem;
+    position: relative;
     &.is-small{
       max-width: 600px;
     }
@@ -9,10 +10,13 @@
         max-width: 900px;
       }
     &.is-large{
-      max-width: 1200px;
-    }
+      max-width: 1300px;
+    }    
     &.is-fluid{
       max-width: 100%;
+    }
+    &.has-shadow{
+      box-shadow:darken($color: #000000, $amount: 0.2);
     }
     .slider {
     padding-right: 15px;
@@ -24,5 +28,27 @@
     }
     .content{
       margin-bottom:$block-spacing-sm;
+      z-index: 4;
+      &.absolute-top{
+        position:absolute;
+        top:$block-spacing-xl;
+        left:$block-spacing-xl;
+      }
+
     }
 } 
+
+.box{
+  display:flex;
+  .span{
+    width:50px;
+    padding:0.5rem 0 0.5rem;
+  }
+  .icones{
+    font-size:0.75rem;
+      align-items: flex-start;
+  }
+  .inside-box{
+    display:block;
+  }
+}

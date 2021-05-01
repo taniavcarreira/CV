@@ -3,6 +3,7 @@
   Helpers
 */
 
+
 .is-pulled-right{
   float:right!important;
 }
@@ -17,6 +18,9 @@
 
 .width--75{
   width:75%!important;
+}
+.margin-header{
+  margin-top:81px;
 }
 
 .margin--none{
@@ -38,10 +42,23 @@
   padding-left:100px;
 }
 
+.margin-t--10vh{
+  margin-top: 10vh  !important;
+}
 
 .margin-t--25vh{
   margin-top: 25vh  !important;
 }
+
+.margin-t--30vh{
+  margin-top: 30vh  !important;
+}
+
+.margin-v--40{
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
 .has-text-center{
   text-align: center;
 }
@@ -67,6 +84,14 @@
 
 .has-text-white{
   color:$white!important;
+}
+
+.has-text-grey-dark{
+  color:$grey-dark!important;
+}
+
+.has-font-weight-light{
+  font-weight: 300;
 }
 
 .has-text-size-xl{
@@ -128,6 +153,37 @@
   margin: 0 $block-spacing-xs!important;
 }
 
+.has-v-padding-sm{
+  padding-top: $block-spacing-sm!important;
+  padding-bottom: $block-spacing-sm!important;
+}
+
+.has-v-padding-md{
+  padding-top: $block-spacing!important;
+  padding-bottom: $block-spacing!important;
+}
+
+.has-v-padding-lg{
+  padding-top: $block-spacing-lg!important;
+  padding-bottom: $block-spacing-lg!important;
+}
+
+
+.has-v-padding-xl{
+  padding-top: $block-spacing-xl!important;
+  padding-bottom: $block-spacing-xl!important;
+}
+
+.has-v-padding-2xl{
+  padding-top: $block-spacing-2xl!important;
+  padding-bottom: $block-spacing-2xl!important;
+}
+
+.has-v-padding-3xl{
+  padding-top: $block-spacing-3xl!important;
+  padding-bottom: $block-spacing-3xl!important;
+}
+
 .background--red{
   background:$danger!important;
   h1,
@@ -148,6 +204,10 @@
   float:right!important;
 }
 
+.has-no-background {
+  background-color: $white;
+}
+
 .has-background-primary {
   background-color: $primary!important;
 }
@@ -156,9 +216,10 @@
   background-color: $white!important;
 }
 
-.has-background-primary {
-  background-color: $grey!important;
+.has-background-grey-cv {
+  background-color: $grey-cv;
 }
+
 
 .is-flex{
 display:flex;
@@ -188,4 +249,36 @@ display:flex;
 
 .has-p-top{
   padding-top:250px;
+}
+
+.has-radius-top-left{
+  border-radius:1rem 0 0 0;
+}
+
+.has-radius-top-right {
+  border-radius: 0 1rem 0 0;
+}
+
+.has-radius-bottom-left{
+  border-radius: 0 0 0 1rem;
+}
+
+.has-radius-bottom-right{
+  border-radius: 0 0 1rem 0;
+}
+
+.has-border-top-2{
+  border-top: 0.5rem solid transparent ;
+  box-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+  &.is-yellow{
+    border-color: $fm-yellow;
+  }
+}
+
+.is-position-relative{
+  position:relative;
+}
+
+.has-font-subtitle{
+  font-family: $family-sans-serif;
 }

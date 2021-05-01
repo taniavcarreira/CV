@@ -3,8 +3,9 @@
     padding:0.5rem;
     min-height: 2rem;
     align-items:center;
-        display:flex;
-        justify-content: space-between; 
+    display:flex;
+    justify-content: space-between; 
+    z-index:3;
     
     .logo__page-title{
         clear:both;
@@ -51,6 +52,7 @@
         padding: 0.5rem 1rem;
         line-height:1rem;
         text-transform: uppercase;
+        font-size: $size-7;
         > a:not(.button), 
         span{
             color:$white;
@@ -258,3 +260,4 @@ input {
     left: 0;
     z-index: 1030;
 }
+

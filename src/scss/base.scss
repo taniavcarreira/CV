@@ -9,6 +9,12 @@ body {
   flex-direction: column;
   align-items: stretch;
   min-height: 100vh;
+    .absolute-bottom{
+    position:fixed;
+    bottom:-1rem;
+    left:auto;
+    z-index:999;
+    }
 }
 
 .app{
